@@ -1,0 +1,443 @@
+{"level":"info","message":"Starting database migration...","service":"emotion-engagement-backend","timestamp":"2025-08-24 02:44:38"}
+{"code":"28000","file":"miscinit.c","length":100,"level":"error","line":"770","message":"Failed to connect to PostgreSQL: role \"postgres\" does not exist","name":"error","routine":"InitializeSessionUserId","service":"emotion-engagement-backend","severity":"FATAL","stack":"error: role \"postgres\" does not exist\n    at /Users/adeshsiddharth123/project 1/backend/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async connectDB (/Users/adeshsiddharth123/project 1/backend/src/database/connection.js:27:20)\n    at async createTables (/Users/adeshsiddharth123/project 1/backend/src/database/migrate.js:10:5)","timestamp":"2025-08-24 02:44:38"}
+{"level":"info","message":"Starting database migration...","service":"emotion-engagement-backend","timestamp":"2025-08-24 02:44:53"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 02:44:53"}
+{"level":"info","message":"Users table created/verified","service":"emotion-engagement-backend","timestamp":"2025-08-24 02:44:53"}
+{"level":"info","message":"Sessions table created/verified","service":"emotion-engagement-backend","timestamp":"2025-08-24 02:44:53"}
+{"level":"info","message":"Session users table created/verified","service":"emotion-engagement-backend","timestamp":"2025-08-24 02:44:53"}
+{"level":"info","message":"Engagement metrics table created/verified","service":"emotion-engagement-backend","timestamp":"2025-08-24 02:44:53"}
+{"level":"info","message":"Session analytics table created/verified","service":"emotion-engagement-backend","timestamp":"2025-08-24 02:44:53"}
+{"level":"info","message":"Database indexes created/verified","service":"emotion-engagement-backend","timestamp":"2025-08-24 02:44:53"}
+{"level":"info","message":"Updated at trigger function created/verified","service":"emotion-engagement-backend","timestamp":"2025-08-24 02:44:53"}
+{"level":"info","message":"Updated at triggers created/verified","service":"emotion-engagement-backend","timestamp":"2025-08-24 02:44:53"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 13:49:28"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 13:49:28"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 13:49:28"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 13:49:28"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 13:51:09"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 13:51:09"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 13:51:09"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 13:51:09"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 13:52:46"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 13:52:46"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 13:52:46"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 13:52:46"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 13:52:46"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 13:52:46"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 13:52:46"}
+{"level":"info","message":"SIGINT received, shutting down gracefully","service":"emotion-engagement-backend","timestamp":"2025-08-24 13:56:01"}
+{"level":"info","message":"Starting database migration...","service":"emotion-engagement-backend","timestamp":"2025-08-24 14:10:23"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 14:10:23"}
+{"level":"info","message":"Users table created/verified","service":"emotion-engagement-backend","timestamp":"2025-08-24 14:10:23"}
+{"level":"info","message":"Sessions table created/verified","service":"emotion-engagement-backend","timestamp":"2025-08-24 14:10:23"}
+{"level":"info","message":"Session users table created/verified","service":"emotion-engagement-backend","timestamp":"2025-08-24 14:10:23"}
+{"level":"info","message":"Engagement metrics table created/verified","service":"emotion-engagement-backend","timestamp":"2025-08-24 14:10:23"}
+{"level":"info","message":"Session analytics table created/verified","service":"emotion-engagement-backend","timestamp":"2025-08-24 14:10:23"}
+{"level":"info","message":"Database indexes created/verified","service":"emotion-engagement-backend","timestamp":"2025-08-24 14:10:23"}
+{"level":"info","message":"Updated at trigger function created/verified","service":"emotion-engagement-backend","timestamp":"2025-08-24 14:10:23"}
+{"level":"info","message":"Updated at triggers created/verified","service":"emotion-engagement-backend","timestamp":"2025-08-24 14:10:23"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 14:10:53"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 14:10:53"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 14:10:53"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 14:10:53"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 14:10:53"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 14:10:53"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 14:10:53"}
+{"level":"info","message":"SIGINT received, shutting down gracefully","service":"emotion-engagement-backend","timestamp":"2025-08-24 14:41:58"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 14:44:37"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 14:44:37"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 14:44:37"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 14:44:37"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 14:44:37"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 14:44:37"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 14:44:37"}
+{"level":"info","message":"SIGINT received, shutting down gracefully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:01:10"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:02:18"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:02:18"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:02:18"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:02:18"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:02:18"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:02:18"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:02:18"}
+{"email":"test@example.com","level":"info","message":"User registered successfully","role":"student","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:07:31","userId":1}
+{"email":"test@example.com","level":"info","message":"User logged in successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:07:35","userId":1}
+{"email":"adeshsiddhartha2005@gmail.com","level":"info","message":"User registered successfully","role":"student","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:09:14","userId":2}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:24:38"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:24:38"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:24:38"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:24:38"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:24:38"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:24:38"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:24:38"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:25:18"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:25:18"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:25:18"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:25:18"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:25:18"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:25:18"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:25:18"}
+{"level":"info","message":"SIGTERM received, shutting down gracefully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:26:13"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:27:54"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:27:54"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:27:54"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:27:54"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:27:54"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:27:54"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:27:54"}
+{"level":"info","message":"SIGINT received, shutting down gracefully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:32:17"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:32:35"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:32:35"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:32:35"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:32:35"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:32:35"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:32:35"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:32:35"}
+{"level":"warn","message":"Insufficient permissions","requiredRoles":["teacher","admin"],"service":"emotion-engagement-backend","timestamp":"2025-08-24 16:33:20","userId":1,"userRole":"student"}
+{"email":"teacher@example.com","level":"info","message":"User registered successfully","role":"teacher","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:33:24","userId":3}
+{"error":"column s.ended_at does not exist","level":"error","message":"Database query error:","service":"emotion-engagement-backend","text":"SELECT COUNT(DISTINCT su.user_id) as total_students\n       FROM session_users su\n       JOIN sessions s ON su.session_id = s.id\n       WHERE s.ended_at IS NULL AND su.user_id != s.created_by","timestamp":"2025-08-24 16:33:31"}
+{"code":"42703","file":"parse_relation.c","length":109,"level":"error","line":"3675","message":"Class overview fetch error: column s.ended_at does not exist","name":"error","position":"142","routine":"errorMissingColumn","service":"emotion-engagement-backend","severity":"ERROR","stack":"error: column s.ended_at does not exist\n    at /Users/adeshsiddharth123/project 1/backend/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async query (/Users/adeshsiddharth123/project 1/backend/src/database/connection.js:56:17)\n    at async /Users/adeshsiddharth123/project 1/backend/src/routes/metrics.js:91:33","timestamp":"2025-08-24 16:33:31"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:00"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:00"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:00"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:00"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:00"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:00"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:00"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:08"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:08"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:08"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:08"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:08"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:08"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:08"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:16"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:16"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:16"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:16"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:16"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:16"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:16"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:24"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:24"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:24"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:24"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:24"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:24"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:24"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:31"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:31"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:31"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:31"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:31"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:31"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:31"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:39"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:39"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:39"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:39"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:39"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:39"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:39"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:45"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:45"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:45"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:45"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:45"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:45"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:45"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:52"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:52"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:52"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:52"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:52"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:52"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:52"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:58"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:58"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:58"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:58"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:58"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:58"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:34:58"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:06"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:06"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:06"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:06"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:06"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:06"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:06"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:12"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:12"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:12"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:12"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:12"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:12"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:12"}
+{"error":"column s.created_by does not exist","level":"error","message":"Database query error:","service":"emotion-engagement-backend","text":"SELECT COUNT(DISTINCT su.user_id) as total_students\n       FROM session_users su\n       JOIN sessions s ON su.session_id = s.id\n       WHERE s.end_time IS NULL AND su.user_id != s.created_by","timestamp":"2025-08-24 16:35:23"}
+{"code":"42703","file":"parse_relation.c","hint":"Perhaps you meant to reference the column \"s.created_at\".","length":170,"level":"error","line":"3675","message":"Class overview fetch error: column s.created_by does not exist","name":"error","position":"179","routine":"errorMissingColumn","service":"emotion-engagement-backend","severity":"ERROR","stack":"error: column s.created_by does not exist\n    at /Users/adeshsiddharth123/project 1/backend/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async query (/Users/adeshsiddharth123/project 1/backend/src/database/connection.js:56:17)\n    at async /Users/adeshsiddharth123/project 1/backend/src/routes/metrics.js:91:33","timestamp":"2025-08-24 16:35:23"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:35"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:35"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:35"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:35"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:35"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:35"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:35"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:41"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:41"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:41"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:41"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:41"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:41"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:41"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:48"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:48"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:48"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:48"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:48"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:48"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:48"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:55"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:55"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:55"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:55"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:55"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:55"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:35:55"}
+{"error":"column em.user_id does not exist","level":"error","message":"Database query error:","service":"emotion-engagement-backend","text":"SELECT COUNT(DISTINCT em.user_id) as online_students\n       FROM engagement_metrics em\n       JOIN sessions s ON em.session_id = s.id\n       WHERE s.end_time IS NULL \n       AND em.timestamp > NOW() - INTERVAL '5 minutes'","timestamp":"2025-08-24 16:36:06"}
+{"code":"42703","file":"parse_relation.c","length":108,"level":"error","line":"3675","message":"Class overview fetch error: column em.user_id does not exist","name":"error","position":"23","routine":"errorMissingColumn","service":"emotion-engagement-backend","severity":"ERROR","stack":"error: column em.user_id does not exist\n    at /Users/adeshsiddharth123/project 1/backend/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async query (/Users/adeshsiddharth123/project 1/backend/src/database/connection.js:56:17)\n    at async /Users/adeshsiddharth123/project 1/backend/src/routes/metrics.js:99:34","timestamp":"2025-08-24 16:36:06"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:36:26"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:36:26"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:36:26"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:36:26"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:36:26"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:36:26"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:36:26"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:36:41"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:36:41"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:36:41"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:36:41"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:36:41"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:36:41"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:36:41"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:37:00"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:37:00"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:37:00"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:37:00"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:37:00"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:37:00"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:37:00"}
+{"email":"teacher@example.com","level":"info","message":"User logged in successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:38:31","userId":3}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:43:22"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:43:22"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:43:22"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:43:22"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:43:22"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:43:22"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:43:22"}
+{"error":"column \"emotion_detection_enabled\" of relation \"session_analytics\" does not exist","level":"error","message":"Database query error:","params":[1,true,true,true],"service":"emotion-engagement-backend","text":"INSERT INTO session_analytics \n         (session_id, emotion_detection_enabled, recording_enabled, chat_enabled, created_at)\n         VALUES ($1, $2, $3, $4, CURRENT_TIMESTAMP)","timestamp":"2025-08-24 16:43:40"}
+{"code":"42703","file":"parse_target.c","length":155,"level":"error","line":"1080","message":"Session creation error: column \"emotion_detection_enabled\" of relation \"session_analytics\" does not exist","name":"error","position":"54","routine":"checkInsertTargets","service":"emotion-engagement-backend","severity":"ERROR","stack":"error: column \"emotion_detection_enabled\" of relation \"session_analytics\" does not exist\n    at /Users/adeshsiddharth123/project 1/backend/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async query (/Users/adeshsiddharth123/project 1/backend/src/database/connection.js:56:17)\n    at async /Users/adeshsiddharth123/project 1/backend/src/routes/sessions.js:50:7","timestamp":"2025-08-24 16:43:40"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:43:59"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:43:59"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:43:59"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:43:59"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:43:59"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:43:59"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:43:59"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:44:15"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:44:15"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:44:15"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:44:15"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:44:15"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:44:15"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:44:15"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:44:24"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:44:24"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:44:24"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:44:24"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:44:24"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:44:24"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:44:24"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:44:31"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:44:31"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:44:31"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:44:31"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:44:31"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:44:31"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:44:31"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:44:39"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:44:39"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:44:39"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:44:39"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:44:39"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:44:39"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:44:39"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:44:50"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:44:50"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:44:50"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:44:50"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:44:50"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:44:50"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:44:50"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:45:05"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:45:05"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:45:05"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:45:05"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:45:05"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:45:05"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:45:05"}
+{"level":"info","message":"Session created successfully","service":"emotion-engagement-backend","sessionId":2,"startTime":"2025-08-24T11:15:00.000Z","teacherId":3,"timestamp":"2025-08-24 16:45:42","title":"Test Session"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:46:26"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:46:26"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:46:26"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:46:26"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:46:26"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:46:26"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:46:26"}
+{"email":"teacher@example.com","level":"info","message":"User logged in successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 16:52:38","userId":3}
+{"level":"info","message":"Session created successfully","service":"emotion-engagement-backend","sessionId":3,"startTime":"2025-08-24T05:57:00.000Z","teacherId":3,"timestamp":"2025-08-24 17:02:01","title":"web development"}
+{"level":"info","message":"Session created successfully","service":"emotion-engagement-backend","sessionId":4,"startTime":"2025-08-24T06:02:00.000Z","teacherId":3,"timestamp":"2025-08-24 17:02:23","title":"web"}
+{"level":"info","message":"Session created successfully","service":"emotion-engagement-backend","sessionId":5,"startTime":"2025-08-24T06:02:00.000Z","teacherId":3,"timestamp":"2025-08-24 17:02:56","title":"web"}
+{"email":"adeshsiddhartha2005@gmail.com","level":"info","message":"User logged in successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 17:03:55","userId":2}
+{"email":"adeshsiddhartha2005@gmail.com","level":"info","message":"User logged in successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 17:08:59","userId":2}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 17:18:13"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 17:18:13"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 17:18:13"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 17:18:13"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 17:18:13"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 17:18:13"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 17:18:13"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 17:18:27"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 17:18:27"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 17:18:27"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 17:18:27"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 17:24:17"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 17:24:17"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 17:24:17"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 17:24:17"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 17:24:17"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 17:24:17"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 17:24:17"}
+{"level":"info","message":"SIGINT received, shutting down gracefully","service":"emotion-engagement-backend","timestamp":"2025-08-24 17:32:33"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 17:33:55"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 17:33:55"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 17:33:55"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 17:33:55"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 17:33:55"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 17:33:55"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 17:33:55"}
+{"level":"info","message":"SIGINT received, shutting down gracefully","service":"emotion-engagement-backend","timestamp":"2025-08-24 18:15:33"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 18:19:50"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 18:19:50"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 18:19:50"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 18:19:50"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 18:19:50"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 18:19:50"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 18:19:50"}
+{"level":"info","message":"SIGINT received, shutting down gracefully","service":"emotion-engagement-backend","timestamp":"2025-08-24 18:24:50"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 18:25:33"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 18:25:33"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 18:25:33"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 18:25:33"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 18:25:33"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 18:25:33"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 18:25:33"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 18:26:34"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 18:26:34"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 18:26:34"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 18:26:34"}
+{"email":"teacher@example.com","level":"info","message":"User logged in successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 18:57:24","userId":3}
+{"level":"info","message":"SIGINT received, shutting down gracefully","service":"emotion-engagement-backend","timestamp":"2025-08-24 21:46:21"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 21:58:01"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 21:58:01"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 21:58:01"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 21:58:01"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 21:58:01"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 21:58:01"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 21:58:01"}
+{"level":"info","message":"SIGINT received, shutting down gracefully","service":"emotion-engagement-backend","timestamp":"2025-08-24 21:59:04"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 21:59:36"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 21:59:36"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 21:59:36"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 21:59:36"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 21:59:36"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 21:59:36"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 21:59:36"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 22:01:03"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 22:01:03"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 22:01:03"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 22:01:03"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 22:01:58"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 22:01:58"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 22:01:58"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 22:01:58"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 22:01:58"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 22:01:58"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 22:01:58"}
+{"level":"info","message":"Session created successfully","service":"emotion-engagement-backend","sessionId":6,"startTime":"2025-08-24T11:14:00.000Z","teacherId":3,"timestamp":"2025-08-24 22:14:55","title":"web"}
+{"level":"info","message":"Session created successfully","service":"emotion-engagement-backend","sessionId":7,"startTime":"2025-08-24T11:15:00.000Z","teacherId":3,"timestamp":"2025-08-24 22:15:41","title":"web"}
+{"email":"adeshsiddhartha2005@gmail.com","level":"info","message":"User logged in successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 22:16:42","userId":2}
+{"email":"teacher@example.com","level":"info","message":"User logged in successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 22:33:08","userId":3}
+{"level":"info","message":"Session created successfully","service":"emotion-engagement-backend","sessionId":8,"startTime":"2025-08-24T11:33:00.000Z","teacherId":3,"timestamp":"2025-08-24 22:33:25","title":"web"}
+{"email":"adeshsiddhartha2005@gmail.com","level":"info","message":"User logged in successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 22:33:33","userId":2}
+{"error":"invalid input syntax for type integer: \"available\"","level":"error","message":"Database query error:","params":["available",2],"service":"emotion-engagement-backend","text":"SELECT * FROM session_users WHERE session_id = $1 AND user_id = $2","timestamp":"2025-08-24 22:33:36"}
+{"code":"22P02","file":"numutils.c","length":147,"level":"error","line":"235","message":"Session fetch error: invalid input syntax for type integer: \"available\"","name":"error","routine":"pg_strtoint32","service":"emotion-engagement-backend","severity":"ERROR","stack":"error: invalid input syntax for type integer: \"available\"\n    at /Users/adeshsiddharth123/project 1/backend/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async query (/Users/adeshsiddharth123/project 1/backend/src/database/connection.js:56:17)\n    at async /Users/adeshsiddharth123/project 1/backend/src/routes/sessions.js:178:25","timestamp":"2025-08-24 22:33:36","where":"unnamed portal parameter $1 = '...'"}
+{"error":"invalid input syntax for type integer: \"available\"","level":"error","message":"Database query error:","params":["available",2],"service":"emotion-engagement-backend","text":"SELECT * FROM session_users WHERE session_id = $1 AND user_id = $2","timestamp":"2025-08-24 22:33:36"}
+{"code":"22P02","file":"numutils.c","length":147,"level":"error","line":"235","message":"Session fetch error: invalid input syntax for type integer: \"available\"","name":"error","routine":"pg_strtoint32","service":"emotion-engagement-backend","severity":"ERROR","stack":"error: invalid input syntax for type integer: \"available\"\n    at /Users/adeshsiddharth123/project 1/backend/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async query (/Users/adeshsiddharth123/project 1/backend/src/database/connection.js:56:17)\n    at async /Users/adeshsiddharth123/project 1/backend/src/routes/sessions.js:178:25","timestamp":"2025-08-24 22:33:36","where":"unnamed portal parameter $1 = '...'"}
+{"error":"invalid input syntax for type integer: \"available\"","level":"error","message":"Database query error:","params":["available",2],"service":"emotion-engagement-backend","text":"SELECT * FROM session_users WHERE session_id = $1 AND user_id = $2","timestamp":"2025-08-24 22:33:38"}
+{"code":"22P02","file":"numutils.c","length":147,"level":"error","line":"235","message":"Session fetch error: invalid input syntax for type integer: \"available\"","name":"error","routine":"pg_strtoint32","service":"emotion-engagement-backend","severity":"ERROR","stack":"error: invalid input syntax for type integer: \"available\"\n    at /Users/adeshsiddharth123/project 1/backend/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async query (/Users/adeshsiddharth123/project 1/backend/src/database/connection.js:56:17)\n    at async /Users/adeshsiddharth123/project 1/backend/src/routes/sessions.js:178:25","timestamp":"2025-08-24 22:33:38","where":"unnamed portal parameter $1 = '...'"}
+{"error":"invalid input syntax for type integer: \"available\"","level":"error","message":"Database query error:","params":["available",2],"service":"emotion-engagement-backend","text":"SELECT * FROM session_users WHERE session_id = $1 AND user_id = $2","timestamp":"2025-08-24 22:33:38"}
+{"code":"22P02","file":"numutils.c","length":147,"level":"error","line":"235","message":"Session fetch error: invalid input syntax for type integer: \"available\"","name":"error","routine":"pg_strtoint32","service":"emotion-engagement-backend","severity":"ERROR","stack":"error: invalid input syntax for type integer: \"available\"\n    at /Users/adeshsiddharth123/project 1/backend/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async query (/Users/adeshsiddharth123/project 1/backend/src/database/connection.js:56:17)\n    at async /Users/adeshsiddharth123/project 1/backend/src/routes/sessions.js:178:25","timestamp":"2025-08-24 22:33:38","where":"unnamed portal parameter $1 = '...'"}
+{"error":"invalid input syntax for type integer: \"available\"","level":"error","message":"Database query error:","params":["available",2],"service":"emotion-engagement-backend","text":"SELECT * FROM session_users WHERE session_id = $1 AND user_id = $2","timestamp":"2025-08-24 22:34:27"}
+{"code":"22P02","file":"numutils.c","length":147,"level":"error","line":"235","message":"Session fetch error: invalid input syntax for type integer: \"available\"","name":"error","routine":"pg_strtoint32","service":"emotion-engagement-backend","severity":"ERROR","stack":"error: invalid input syntax for type integer: \"available\"\n    at /Users/adeshsiddharth123/project 1/backend/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async query (/Users/adeshsiddharth123/project 1/backend/src/database/connection.js:56:17)\n    at async /Users/adeshsiddharth123/project 1/backend/src/routes/sessions.js:178:25","timestamp":"2025-08-24 22:34:27","where":"unnamed portal parameter $1 = '...'"}
+{"error":"invalid input syntax for type integer: \"available\"","level":"error","message":"Database query error:","params":["available",2],"service":"emotion-engagement-backend","text":"SELECT * FROM session_users WHERE session_id = $1 AND user_id = $2","timestamp":"2025-08-24 22:34:27"}
+{"code":"22P02","file":"numutils.c","length":147,"level":"error","line":"235","message":"Session fetch error: invalid input syntax for type integer: \"available\"","name":"error","routine":"pg_strtoint32","service":"emotion-engagement-backend","severity":"ERROR","stack":"error: invalid input syntax for type integer: \"available\"\n    at /Users/adeshsiddharth123/project 1/backend/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async query (/Users/adeshsiddharth123/project 1/backend/src/database/connection.js:56:17)\n    at async /Users/adeshsiddharth123/project 1/backend/src/routes/sessions.js:178:25","timestamp":"2025-08-24 22:34:27","where":"unnamed portal parameter $1 = '...'"}
+{"error":"invalid input syntax for type integer: \"available\"","level":"error","message":"Database query error:","params":["available",2],"service":"emotion-engagement-backend","text":"SELECT * FROM session_users WHERE session_id = $1 AND user_id = $2","timestamp":"2025-08-24 22:34:28"}
+{"code":"22P02","file":"numutils.c","length":147,"level":"error","line":"235","message":"Session fetch error: invalid input syntax for type integer: \"available\"","name":"error","routine":"pg_strtoint32","service":"emotion-engagement-backend","severity":"ERROR","stack":"error: invalid input syntax for type integer: \"available\"\n    at /Users/adeshsiddharth123/project 1/backend/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async query (/Users/adeshsiddharth123/project 1/backend/src/database/connection.js:56:17)\n    at async /Users/adeshsiddharth123/project 1/backend/src/routes/sessions.js:178:25","timestamp":"2025-08-24 22:34:28","where":"unnamed portal parameter $1 = '...'"}
+{"error":"invalid input syntax for type integer: \"available\"","level":"error","message":"Database query error:","params":["available",2],"service":"emotion-engagement-backend","text":"SELECT * FROM session_users WHERE session_id = $1 AND user_id = $2","timestamp":"2025-08-24 22:34:34"}
+{"code":"22P02","file":"numutils.c","length":147,"level":"error","line":"235","message":"Session fetch error: invalid input syntax for type integer: \"available\"","name":"error","routine":"pg_strtoint32","service":"emotion-engagement-backend","severity":"ERROR","stack":"error: invalid input syntax for type integer: \"available\"\n    at /Users/adeshsiddharth123/project 1/backend/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async query (/Users/adeshsiddharth123/project 1/backend/src/database/connection.js:56:17)\n    at async /Users/adeshsiddharth123/project 1/backend/src/routes/sessions.js:178:25","timestamp":"2025-08-24 22:34:34","where":"unnamed portal parameter $1 = '...'"}
+{"level":"info","message":"SIGTERM received, shutting down gracefully","service":"emotion-engagement-backend","timestamp":"2025-08-24 22:37:12"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 22:37:27"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 22:37:27"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 22:37:27"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-24 22:37:27"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 22:37:27"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-24 22:37:27"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-24 22:37:27"}
+{"email":"teacher@example.com","level":"info","message":"User logged in successfully","service":"emotion-engagement-backend","timestamp":"2025-08-24 22:54:09","userId":3}
+{"level":"info","message":"Session created successfully","service":"emotion-engagement-backend","sessionId":9,"startTime":"2025-08-25T09:27:00.000Z","teacherId":3,"timestamp":"2025-08-25 20:27:16","title":"web d"}
+{"level":"info","message":"Session created successfully","service":"emotion-engagement-backend","sessionId":10,"startTime":"2025-08-25T09:27:00.000Z","teacherId":3,"timestamp":"2025-08-25 20:27:36","title":"web "}
+{"email":"adeshsiddhartha2005@gmail.com","ip":"::1","level":"warn","message":"Failed login attempt","service":"emotion-engagement-backend","timestamp":"2025-08-25 20:28:01"}
+{"email":"adeshsiddhartha2005@gmail.com","ip":"::1","level":"warn","message":"Failed login attempt","service":"emotion-engagement-backend","timestamp":"2025-08-25 20:28:06"}
+{"email":"adeshsiddhartha2005@gmail.com","ip":"::1","level":"warn","message":"Failed login attempt","service":"emotion-engagement-backend","timestamp":"2025-08-25 20:28:07"}
+{"email":"adeshsiddhartha2005@gmail.com","ip":"::1","level":"warn","message":"Failed login attempt","service":"emotion-engagement-backend","timestamp":"2025-08-25 20:28:07"}
+{"email":"adeshsiddhartha2005@gmail.com","ip":"::1","level":"warn","message":"Failed login attempt","service":"emotion-engagement-backend","timestamp":"2025-08-25 20:28:08"}
+{"email":"adeshsiddhartha2005@gmail.com","ip":"::1","level":"warn","message":"Failed login attempt","service":"emotion-engagement-backend","timestamp":"2025-08-25 20:28:11"}
+{"email":"adeshsiddhartha2005@gmail.com","ip":"::1","level":"warn","message":"Failed login attempt","service":"emotion-engagement-backend","timestamp":"2025-08-25 20:28:13"}
+{"email":"adeshsiddhartha2005@gmail.com","ip":"::1","level":"warn","message":"Failed login attempt","service":"emotion-engagement-backend","timestamp":"2025-08-25 20:28:13"}
+{"email":"student1@gmail.com","level":"info","message":"User registered successfully","role":"student","service":"emotion-engagement-backend","timestamp":"2025-08-25 20:28:52","userId":4}
+{"level":"info","message":"SIGTERM received, shutting down gracefully","service":"emotion-engagement-backend","timestamp":"2025-08-25 21:01:11"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-25 21:01:43"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-25 21:01:43"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-25 21:01:43"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-25 21:01:43"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-25 21:01:43"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-25 21:01:43"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-25 21:01:43"}
+{"level":"info","message":"SIGINT received, shutting down gracefully","service":"emotion-engagement-backend","timestamp":"2025-08-25 21:03:24"}
+{"level":"info","message":"PostgreSQL database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-25 21:03:30"}
+{"level":"info","message":"Database connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-25 21:03:30"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-25 21:03:30"}
+{"level":"info","message":"Redis client ready","service":"emotion-engagement-backend","timestamp":"2025-08-25 21:03:30"}
+{"level":"info","message":"Redis connected successfully","service":"emotion-engagement-backend","timestamp":"2025-08-25 21:03:30"}
+{"level":"info","message":"Server running on port 5002","service":"emotion-engagement-backend","timestamp":"2025-08-25 21:03:30"}
+{"level":"info","message":"Environment: development","service":"emotion-engagement-backend","timestamp":"2025-08-25 21:03:30"}
+{"email":"adeshsiddhartha2005@gmail.com","level":"info","message":"User logged in successfully","service":"emotion-engagement-backend","timestamp":"2025-08-25 21:03:39","userId":2}
+{"email":"teacher@example.com","level":"info","message":"User logged in successfully","service":"emotion-engagement-backend","timestamp":"2025-08-25 21:03:46","userId":3}
+{"email":"test@example.com","level":"info","message":"User logged in successfully","service":"emotion-engagement-backend","timestamp":"2025-08-25 21:03:57","userId":1}
+{"email":"teacher@example.com","level":"info","message":"User logged in successfully","service":"emotion-engagement-backend","timestamp":"2025-08-25 21:04:31","userId":3}
+{"level":"info","message":"Session created successfully","service":"emotion-engagement-backend","sessionId":11,"startTime":"2025-08-25T10:04:00.000Z","teacherId":3,"timestamp":"2025-08-25 21:05:07","title":"web "}
+{"email":"adeshsiddhartha2005@gmail.com","ip":"::1","level":"warn","message":"Failed login attempt","service":"emotion-engagement-backend","timestamp":"2025-08-25 21:05:38"}
+{"email":"adeshsiddhartha2005@gmail.com","ip":"::1","level":"warn","message":"Failed login attempt","service":"emotion-engagement-backend","timestamp":"2025-08-25 21:05:48"}
+{"email":"adeshsiddhartha2005@gmail.com","level":"info","message":"User logged in successfully","service":"emotion-engagement-backend","timestamp":"2025-08-25 21:06:16","userId":2}
+{"email":"teacher@example.com","level":"info","message":"User logged in successfully","service":"emotion-engagement-backend","timestamp":"2025-08-25 21:07:35","userId":3}
+{"level":"info","message":"Session created successfully","service":"emotion-engagement-backend","sessionId":12,"startTime":"2025-08-25T10:07:00.000Z","teacherId":3,"timestamp":"2025-08-25 21:07:52","title":"diff"}
