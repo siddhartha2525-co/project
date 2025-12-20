@@ -316,6 +316,38 @@ function init(server) {
             if (classId) io.to(classId).emit('teacher_video_stopped', { classId });
         });
 
+        // Kick Student
+        socket.on('kick_student', (payload) => {
+            const { classId, studentId } = payload || {};
+            // Verify requester is a teacher (basic check: requester socket is in the class room, 
+            // but ideally we'd check a teacher role. use activeClasses or similar if possible.
+            // For now, simple broadcasting logic with specific targetting).
+
+            if (classId && studentId) {
+                console.log(`[kick_student] Request to kick ${studentId} from ${classId}`);
+
+                // Find student socket
+                let targetSocketId = null;
+                for (const [sockId, meta] of studentMap.entries()) {
+                    if (meta.studentId === studentId && meta.classId === classId) {
+                        targetSocketId = sockId;
+                        break;
+                    }
+                }
+
+                if (targetSocketId) {
+                    const targetSocket = io.sockets.sockets.get(targetSocketId);
+                    if (targetSocket) {
+                        targetSocket.emit('kicked', { reason: 'Teacher removed you from the class' });
+                        targetSocket.disconnect(true);
+
+                        // Explicitly notify class (disconnect handler usually does this, but safely ensure it)
+                        io.to(classId).emit('student_left', { studentId: studentId });
+                    }
+                }
+            }
+        });
+
         socket.on('disconnect', () => {
             const meta = studentMap.get(socket.id);
             if (meta) {

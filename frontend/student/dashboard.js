@@ -51,7 +51,7 @@ else if (hostname.includes('railway.app')) {
         console.error("   1. Get your backend URL from Railway dashboard");
         console.error("   2. Add meta tag: <meta name='backend-url' content='https://your-backend.railway.app'>");
         console.error("   3. Or set window.EMOTION_BACKEND_URL in HTML");
-        
+
         // Try same hostname as fallback (might work if behind reverse proxy)
         const BACKEND_PORT = window.EMOTION_BACKEND_PORT || '5001';
         BACKEND_URL = `${protocol}//${hostname}${port ? ':' + port : ''}`;
@@ -70,7 +70,7 @@ console.log("🔗 Backend URL:", BACKEND_URL);
 const WS_URL = BACKEND_URL.replace('http://', 'ws://').replace('https://', 'wss://');
 console.log("🔌 WebSocket URL:", WS_URL);
 
-const socket = io(WS_URL, { 
+const socket = io(WS_URL, {
     autoConnect: false,
     reconnection: true,
     reconnectionDelay: 1000,
@@ -109,9 +109,9 @@ document.getElementById("logoutBtn").onclick = () => {
 // Check if camera access is available
 function isCameraAvailable() {
     try {
-        return !!(typeof navigator !== 'undefined' && 
-                  navigator.mediaDevices && 
-                  typeof navigator.mediaDevices.getUserMedia === 'function');
+        return !!(typeof navigator !== 'undefined' &&
+            navigator.mediaDevices &&
+            typeof navigator.mediaDevices.getUserMedia === 'function');
     } catch (e) {
         return false;
     }
@@ -119,7 +119,7 @@ function isCameraAvailable() {
 
 async function enableCamera() {
     const statusEl = document.getElementById("statusText");
-    
+
     // Check if camera API is available - must check navigator.mediaDevices exists first
     if (typeof navigator === 'undefined' || !navigator.mediaDevices) {
         const errorMsg = "Camera access not available. Mobile browsers require HTTPS for camera access.";
@@ -131,7 +131,7 @@ async function enableCamera() {
         cameraEnabled = false;
         return;
     }
-    
+
     // Check if getUserMedia method exists
     if (typeof navigator.mediaDevices.getUserMedia !== 'function') {
         const errorMsg = "Camera API not supported in this browser. Please use a modern browser or join without video.";
@@ -143,13 +143,13 @@ async function enableCamera() {
         cameraEnabled = false;
         return;
     }
-    
+
     try {
         // Double-check mediaDevices is available (safety check)
         if (!navigator.mediaDevices || typeof navigator.mediaDevices.getUserMedia !== 'function') {
             throw new Error("Camera API not available. Mobile browsers require HTTPS for camera access.");
         }
-        
+
         // Request camera with higher quality constraints for better detection
         const constraints = {
             video: {
@@ -159,7 +159,7 @@ async function enableCamera() {
                 frameRate: { ideal: 30, min: 15 }  // Higher frame rate for smoother video
             }
         };
-        
+
         // Try to get user media
         stream = await navigator.mediaDevices.getUserMedia(constraints);
         const videoElement = document.getElementById("localVideo");
@@ -172,7 +172,7 @@ async function enableCamera() {
             });
         }
         cameraEnabled = true;
-        
+
         // Notify teacher that camera is enabled (if socket is connected)
         const classId = document.getElementById("classId").value;
         if (socket && socket.connected && classId) {
@@ -183,25 +183,25 @@ async function enableCamera() {
                 enabled: true
             });
         }
-        
+
         // Start video stream if socket is connected
         if (socket && socket.connected) {
             if (videoStreamInterval) clearInterval(videoStreamInterval);
             videoStreamInterval = setInterval(sendVideoStream, 150);
         }
-        
+
         if (statusEl) {
             statusEl.innerText = "Camera enabled ✓";
             statusEl.style.color = "#10b981";
         }
-        
+
         console.log("✅ Camera enabled successfully");
     } catch (err) {
         console.error("Camera error:", err);
         cameraEnabled = false;
-        
+
         let errorMsg = "";
-        
+
         // Check for the specific error the user is seeing
         if (err.message && err.message.includes("undefined is not an object")) {
             errorMsg = "Camera API not available. Mobile browsers require HTTPS for camera access.\n\nYou can still join the class without video.";
@@ -239,12 +239,12 @@ async function enableCamera() {
         } else {
             errorMsg = "Camera error: " + (err.name || "Unknown error");
         }
-        
+
         if (statusEl) {
             statusEl.innerText = "⚠️ " + errorMsg.split('\n')[0]; // Show first line only
             statusEl.style.color = "#f59e0b";
         }
-        
+
         // Show alert with full message
         if (errorMsg) {
             alert(errorMsg);
@@ -258,13 +258,13 @@ function stopCamera() {
         stream = null;
     }
     cameraEnabled = false;
-    
+
     // Stop video stream
     if (videoStreamInterval) {
         clearInterval(videoStreamInterval);
         videoStreamInterval = null;
     }
-    
+
     // Notify teacher that camera is disabled
     const classId = document.getElementById("classId").value;
     if (socket.connected && classId) {
@@ -297,7 +297,7 @@ document.getElementById("joinClassBtn").onclick = async () => {
     // First, check if class exists
     statusEl.innerText = "Checking Class ID...";
     statusEl.style.color = "#6b7280";
-    
+
     try {
         const baseUrl = WS_URL.replace('ws://', 'http://').replace('wss://', 'https://');
         const checkResp = await fetch(`${baseUrl}/api/class/${classId}/check`, {
@@ -307,7 +307,7 @@ document.getElementById("joinClassBtn").onclick = async () => {
             signal: AbortSignal.timeout(10000)
         });
         const checkData = await checkResp.json();
-        
+
         if (!checkData.exists) {
             statusEl.innerText = "❌ No class exists with this Class ID. Please check the Class ID and try again.";
             statusEl.style.color = "red";
@@ -354,7 +354,7 @@ document.getElementById("joinClassBtn").onclick = async () => {
     if (!socket.connected) {
         try {
             socket.connect();
-            
+
             // Wait for connection with longer timeout for mobile networks
             await new Promise((resolve, reject) => {
                 const timeout = setTimeout(() => {
@@ -362,13 +362,13 @@ document.getElementById("joinClassBtn").onclick = async () => {
                     statusEl.style.color = "red";
                     reject(new Error("Connection timeout"));
                 }, 15000); // 15 seconds for mobile networks
-                
+
                 socket.once("connect", () => {
                     clearTimeout(timeout);
                     console.log("✅ Socket connected successfully");
                     resolve();
                 });
-                
+
                 socket.once("connect_error", (err) => {
                     clearTimeout(timeout);
                     console.error("❌ Connection error during join:", err);
@@ -393,10 +393,10 @@ document.getElementById("joinClassBtn").onclick = async () => {
         statusEl.style.color = "red";
         return;
     }
-    
+
     statusEl.innerText = "Joining class...";
     statusEl.style.color = "#6b7280";
-    
+
     try {
         socket.emit("join_class", {
             studentId: student.email,
@@ -419,15 +419,15 @@ function sendVideoStream() {
 
     const canvas = document.createElement("canvas");
     const video = document.getElementById("localVideo");
-    
+
     // Use higher resolution for better display quality (640x480 minimum, upscale if needed)
     const videoWidth = video.videoWidth || 640;
     const videoHeight = video.videoHeight || 480;
-    
+
     // Maintain aspect ratio but ensure minimum quality
     let canvasWidth = Math.max(videoWidth, 640);
     let canvasHeight = Math.max(videoHeight, 480);
-    
+
     // Limit max size to prevent too large images (max 1280x720 for good balance)
     const maxWidth = 1280;
     const maxHeight = 720;
@@ -436,11 +436,11 @@ function sendVideoStream() {
         canvasWidth = Math.floor(canvasWidth * scale);
         canvasHeight = Math.floor(canvasHeight * scale);
     }
-    
+
     canvas.width = canvasWidth;
     canvas.height = canvasHeight;
     const ctx = canvas.getContext("2d");
-    
+
     // Use high-quality rendering
     ctx.imageSmoothingEnabled = true;
     ctx.imageSmoothingQuality = 'high';
@@ -466,17 +466,17 @@ function sendSnapshot() {
 
     const canvas = document.createElement("canvas");
     const video = document.getElementById("localVideo");
-    
+
     // Higher resolution for better detection accuracy (640x480 for optimal face detection)
     // This provides better face detail for emotion detection
     const videoWidth = video.videoWidth || 640;
     const videoHeight = video.videoHeight || 480;
-    
+
     // Use 640x480 for detection (optimal for DeepFace)
     // Maintain aspect ratio but prioritize face detection quality
     let canvasWidth = 640;
     let canvasHeight = 480;
-    
+
     // If video is larger, scale down maintaining aspect ratio
     if (videoWidth > 0 && videoHeight > 0) {
         const aspectRatio = videoWidth / videoHeight;
@@ -488,11 +488,11 @@ function sendSnapshot() {
             canvasWidth = Math.floor(canvasHeight * aspectRatio);
         }
     }
-    
+
     canvas.width = canvasWidth;
     canvas.height = canvasHeight;
     const ctx = canvas.getContext("2d");
-    
+
     // High-quality rendering for better detection
     ctx.imageSmoothingEnabled = true;
     ctx.imageSmoothingQuality = 'high';
@@ -513,11 +513,11 @@ function sendSnapshot() {
 
 socket.on("join_ack", (data) => {
     const statusEl = document.getElementById("statusText");
-    
+
     if (data.status === "ok") {
         statusEl.innerText = "Joined ✓ - Waiting for teacher to start detection...";
         statusEl.style.color = "#10b981";
-        
+
         // Send initial camera state
         const classId = document.getElementById("classId").value;
         socket.emit("camera_state", {
@@ -526,13 +526,13 @@ socket.on("join_ack", (data) => {
             classId: classId,
             enabled: cameraEnabled && stream !== null
         });
-        
+
         // Start sending video stream immediately if camera is enabled
         if (stream && cameraEnabled) {
             if (videoStreamInterval) clearInterval(videoStreamInterval);
             videoStreamInterval = setInterval(sendVideoStream, 150);
         }
-        
+
         // Don't start sending detection snapshots - wait for teacher to start detection
     } else {
         // Handle specific error cases
@@ -551,16 +551,16 @@ socket.on("detection_started", (data) => {
     const statusEl = document.getElementById("statusText");
     statusEl.innerText = "Joined ✓ - Detection Active";
     statusEl.style.color = "#10b981";
-    
-        // Start sending video stream for smooth display with lower latency (every 100ms for smoother video)
-        if (stream && cameraEnabled) {
-            if (videoStreamInterval) clearInterval(videoStreamInterval);
-            videoStreamInterval = setInterval(sendVideoStream, 100);  // Reduced from 150ms for lower latency
-            
+
+    // Start sending video stream for smooth display with lower latency (every 100ms for smoother video)
+    if (stream && cameraEnabled) {
+        if (videoStreamInterval) clearInterval(videoStreamInterval);
+        videoStreamInterval = setInterval(sendVideoStream, 100);  // Reduced from 150ms for lower latency
+
         // Start sending detection snapshots (every 800ms for faster detection with good accuracy)
         if (interval) clearInterval(interval);
         interval = setInterval(sendSnapshot, 800);  // Reduced from 1200ms for faster detection
-        }
+    }
 });
 
 socket.on("detection_stopped", (data) => {
@@ -568,13 +568,13 @@ socket.on("detection_stopped", (data) => {
     const statusEl = document.getElementById("statusText");
     statusEl.innerText = "Joined ✓ - Detection Paused";
     statusEl.style.color = "#f59e0b";
-    
+
     // Stop sending detection snapshots
     if (interval) {
         clearInterval(interval);
         interval = null;
     }
-    
+
     // Keep video stream running for display even when detection is paused
     // Video stream continues for smooth display
 });
@@ -584,7 +584,7 @@ socket.on("teacher_video", (data) => {
     const { image } = data;
     const teacherVideo = document.getElementById("teacherVideo");
     const placeholder = document.getElementById("teacherVideoPlaceholder");
-    
+
     if (image && teacherVideo) {
         // Directly use the image as source for smoother updates
         teacherVideo.src = image;
@@ -595,7 +595,7 @@ socket.on("teacher_video", (data) => {
 socket.on("teacher_video_stopped", () => {
     const teacherVideo = document.getElementById("teacherVideo");
     const placeholder = document.getElementById("teacherVideoPlaceholder");
-    
+
     if (teacherVideo) {
         teacherVideo.src = "";
     }
@@ -631,6 +631,11 @@ socket.on("disconnect", () => {
         clearInterval(interval);
         interval = null;
     }
+});
+
+socket.on("kicked", (data) => {
+    alert(data.reason || "You have been kicked from the class.");
+    window.location.href = "../../login.html";
 });
 
 /* ---------- Raise Hand ---------- */

@@ -48,7 +48,7 @@ else if (hostname.includes('railway.app')) {
         console.error("   1. Get your backend URL from Railway dashboard");
         console.error("   2. Add meta tag: <meta name='backend-url' content='https://your-backend.railway.app'>");
         console.error("   3. Or set window.EMOTION_BACKEND_URL in HTML");
-        
+
         // Try same hostname as fallback (might work if behind reverse proxy)
         const BACKEND_PORT = window.EMOTION_BACKEND_PORT || '5001';
         BACKEND_URL = `${protocol}//${hostname}${port ? ':' + port : ''}`;
@@ -67,7 +67,7 @@ console.log("🔗 Backend URL:", BACKEND_URL);
 const WS_URL = BACKEND_URL.replace('http://', 'ws://').replace('https://', 'wss://');
 console.log("🔌 WebSocket URL:", WS_URL);
 
-const socket = io(WS_URL, { 
+const socket = io(WS_URL, {
     autoConnect: false,
     reconnection: true,
     reconnectionDelay: 1000,
@@ -116,7 +116,7 @@ document.getElementById("startTeacherVideoBtn").onclick = async () => {
     try {
         teacherStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
         const classId = document.getElementById("classInput").value.trim() || "CLASS1";
-        
+
         // Create a hidden video element to capture frames
         const video = document.createElement("video");
         video.srcObject = teacherStream;
@@ -124,7 +124,7 @@ document.getElementById("startTeacherVideoBtn").onclick = async () => {
         video.playsInline = true;
         video.style.display = "none";
         document.body.appendChild(video);
-        
+
         // Wait for video to be ready
         await new Promise((resolve) => {
             video.onloadedmetadata = () => {
@@ -132,7 +132,7 @@ document.getElementById("startTeacherVideoBtn").onclick = async () => {
                 resolve();
             };
         });
-        
+
         // Start sending teacher video frames to students (smooth video)
         teacherVideoInterval = setInterval(() => {
             if (teacherStream && video.readyState >= 2) {
@@ -143,11 +143,11 @@ document.getElementById("startTeacherVideoBtn").onclick = async () => {
                 ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
                 // Lower quality for smooth streaming
                 const image = canvas.toDataURL("image/jpeg", 0.6);
-                
+
                 socket.emit("teacher_video", { classId, image });
             }
         }, 150); // Send every 150ms for smooth video (was 500ms)
-        
+
         document.getElementById("startTeacherVideoBtn").style.display = "none";
         document.getElementById("stopTeacherVideoBtn").style.display = "inline-block";
         console.log("Teacher video started for class:", classId);
@@ -158,24 +158,24 @@ document.getElementById("startTeacherVideoBtn").onclick = async () => {
 
 document.getElementById("stopTeacherVideoBtn").onclick = () => {
     const classId = document.getElementById("classInput").value.trim() || "CLASS1";
-    
+
     if (teacherStream) {
         teacherStream.getTracks().forEach(track => track.stop());
         teacherStream = null;
     }
-    
+
     if (teacherVideoInterval) {
         clearInterval(teacherVideoInterval);
         teacherVideoInterval = null;
     }
-    
+
     // Remove hidden video element
     const hiddenVideo = document.querySelector("video[style*='display: none']");
     if (hiddenVideo) {
         hiddenVideo.srcObject = null;
         hiddenVideo.remove();
     }
-    
+
     socket.emit("teacher_video_stopped", { classId });
     document.getElementById("startTeacherVideoBtn").style.display = "inline-block";
     document.getElementById("stopTeacherVideoBtn").style.display = "none";
@@ -204,14 +204,14 @@ document.getElementById("stopDetectionBtn").onclick = () => {
 // Load Roster button - manually refresh
 document.getElementById("loadRoster").onclick = async () => {
     const classId = document.getElementById("classInput").value.trim() || "CLASS1";
-    
+
     if (!socket.connected) {
         socket.connect();
         await new Promise(resolve => {
             socket.once("connect", resolve);
         });
     }
-    
+
     socket.emit("teacher_join", { classId });
     loadRosterData(classId);
 };
@@ -222,7 +222,7 @@ socket.on("connect", () => {
     const classId = document.getElementById("classInput").value.trim() || "CLASS1";
     console.log("Teacher joining class:", classId);
     socket.emit("teacher_join", { classId });
-    
+
     // Also fetch current roster immediately
     setTimeout(() => loadRosterData(classId), 500);
 });
@@ -240,7 +240,7 @@ socket.on("connect_error", (error) => {
     });
     console.error("❌ Attempted to connect to:", WS_URL);
     console.error("❌ Backend URL:", BACKEND_URL);
-    
+
     // Show user-friendly error message
     const errorMsg = `Failed to connect to server.\n\n` +
         `Backend URL: ${BACKEND_URL}\n` +
@@ -251,7 +251,7 @@ socket.on("connect_error", (error) => {
         `2. Backend URL is correct\n` +
         `3. Network connection is active\n` +
         `4. Backend service logs for errors`;
-    
+
     alert(errorMsg);
 });
 
@@ -296,7 +296,7 @@ async function loadRosterData(classId) {
             });
             updateStudentGrid();
         }
-        
+
         // Also fetch summary to populate existing students with data
         const summaryResp = await fetch(`${baseUrl}/api/class/${classId}/summary`);
         const summaryData = await summaryResp.json();
@@ -310,10 +310,10 @@ async function loadRosterData(classId) {
                         engagement: student.avgEngagement || 0,
                         confidence: 0,
                         timeline: (student.eventsSample || []).map(ev => ({
-                            time: new Date(ev.timestamp).toLocaleTimeString('en-US', { 
-                                hour: '2-digit', 
+                            time: new Date(ev.timestamp).toLocaleTimeString('en-US', {
+                                hour: '2-digit',
                                 minute: '2-digit',
-                                hour12: true 
+                                hour12: true
                             }),
                             emotion: (ev.emotion || "NEUTRAL").toUpperCase(),
                             engagement: ev.engagement || 0
@@ -401,12 +401,12 @@ function updateStudentVideoImage(studentId, image) {
 function updateStudentCameraDisplay(studentId, enabled) {
     const cardData = studentCards.get(studentId);
     const student = studentsData.get(studentId);
-    
+
     if (!cardData || !student) return;
-    
+
     const imageElement = cardData.imageElement;
     const placeholder = cardData.cardElement.querySelector('.student-video-placeholder');
-    
+
     if (enabled) {
         // Camera enabled - show video if available, otherwise show placeholder
         if (student.image && imageElement) {
@@ -439,10 +439,10 @@ function updateStudentCameraDisplay(studentId, enabled) {
 // Listen for emotion updates
 socket.on("emotion_update", (data) => {
     const { studentId, name, emotion, engagement, confidence, timestamp, source } = data;
-    
+
     // Normalize emotion to uppercase for display
     let normalizedEmotion = (emotion || "NEUTRAL").toUpperCase();
-    
+
     // Map emotion variations to standard set (comprehensive)
     const emotionMap = {
         'UNKNOWN': 'NEUTRAL',
@@ -457,9 +457,9 @@ socket.on("emotion_update", (data) => {
         'NEUTRAL': 'NEUTRAL',
         '': 'NEUTRAL'  // Empty to neutral
     };
-    
+
     normalizedEmotion = emotionMap[normalizedEmotion] || 'NEUTRAL';  // Always default to NEUTRAL
-    
+
     if (!studentsData.has(studentId)) {
         studentsData.set(studentId, {
             name,
@@ -482,7 +482,7 @@ socket.on("emotion_update", (data) => {
     student.emotion = normalizedEmotion;
     student.engagement = engagement || 0;
     student.confidence = confidence || 0;
-    
+
     // Update confusion data if provided
     if (data.confusionScore !== undefined) {
         student.confusionScore = data.confusionScore;
@@ -490,7 +490,7 @@ socket.on("emotion_update", (data) => {
     }
     // Don't update image from emotion_update - video stream handles display
     // Detection snapshots should not affect the displayed video
-    
+
     // Log for debugging if emotion is unknown or low confidence
     if (normalizedEmotion === 'UNKNOWN' || (confidence && confidence < 30)) {
         console.log(`⚠️ Low confidence emotion for ${name}: ${emotion} -> ${normalizedEmotion}, confidence: ${confidence}%, source: ${source || 'unknown'}`);
@@ -498,12 +498,12 @@ socket.on("emotion_update", (data) => {
         // Log source for monitoring (optional, can be removed in production)
         console.log(`✓ Emotion detected for ${name}: ${normalizedEmotion} (${source}, ${confidence}%)`);
     }
-    
+
     // Update timeline
-    const timeStr = new Date(timestamp).toLocaleTimeString('en-US', { 
-        hour: '2-digit', 
+    const timeStr = new Date(timestamp).toLocaleTimeString('en-US', {
+        hour: '2-digit',
         minute: '2-digit',
-        hour12: true 
+        hour12: true
     });
     student.timeline.push({
         time: timeStr,
@@ -536,12 +536,12 @@ socket.on("emotion_update", (data) => {
             cardData.emotionTagElement.style.background = emotionColor.bg;
             cardData.emotionTagElement.style.color = emotionColor.text;
         }
-        
+
         // Update engagement
         if (cardData.engagementElement) {
             cardData.engagementElement.textContent = `${student.engagement}%`;
         }
-        
+
         // Also update emotion tag in student-info section
         const infoEmotionTag = cardData.cardElement.querySelector('.student-info .emotion-tag');
         if (infoEmotionTag) {
@@ -554,7 +554,7 @@ socket.on("emotion_update", (data) => {
         // Card doesn't exist yet, recreate grid
         updateStudentGrid();
     }
-    
+
     updateRecentEvents();
     if (selectedStudentId === studentId) {
         updateDetailsPanel(studentId);
@@ -594,7 +594,7 @@ socket.on("ask_doubt", (data) => {
 socket.on("student_joined", (data) => {
     const { studentId, name } = data;
     console.log("Student joined event received:", data);
-    
+
     if (!studentsData.has(studentId)) {
         studentsData.set(studentId, {
             name,
@@ -624,12 +624,12 @@ socket.on("student_joined", (data) => {
             }
         }
     }
-    
+
     // Add to recent events
-    const timeStr = new Date().toLocaleTimeString('en-US', { 
-        hour: '2-digit', 
+    const timeStr = new Date().toLocaleTimeString('en-US', {
+        hour: '2-digit',
         minute: '2-digit',
-        hour12: true 
+        hour12: true
     });
     recentEvents.unshift({
         time: timeStr,
@@ -641,11 +641,26 @@ socket.on("student_joined", (data) => {
     updateRecentEvents();
 });
 
+function kickStudent(studentId, name) {
+    if (confirm(`Are you sure you want to kick ${name} from the class?`)) {
+        const classId = document.getElementById("classInput").value.trim() || "CLASS1";
+        socket.emit("kick_student", { classId, studentId });
+        // Optimistically remove from UI
+        studentsData.delete(studentId);
+        studentCards.delete(studentId);
+        if (selectedStudentId === studentId) {
+            selectedStudentId = null;
+            updateDetailsPanel(null);
+        }
+        updateStudentGrid();
+    }
+}
+
 // Listen for student left
 socket.on("student_left", (data) => {
     const { studentId, name } = data;
     console.log("Student left event received:", data);
-    
+
     studentsData.delete(studentId);
     studentCards.delete(studentId);
     if (selectedStudentId === studentId) {
@@ -653,12 +668,12 @@ socket.on("student_left", (data) => {
         updateDetailsPanel(null);
     }
     updateStudentGrid();
-    
+
     // Add to recent events
-    const timeStr = new Date().toLocaleTimeString('en-US', { 
-        hour: '2-digit', 
+    const timeStr = new Date().toLocaleTimeString('en-US', {
+        hour: '2-digit',
         minute: '2-digit',
-        hour12: true 
+        hour12: true
     });
     recentEvents.unshift({
         time: timeStr,
@@ -675,7 +690,7 @@ function updateStudentGrid() {
     const container = document.getElementById("studentsContainer");
     const filterSelect = document.getElementById("filterSelect");
     const filterValue = filterSelect.value;
-    
+
     // Clear container and card references
     container.innerHTML = "";
     studentCards.clear();
@@ -719,11 +734,11 @@ function updateStudentGrid() {
 
         const emotionColor = getEmotionColor(student.emotion);
         const emotionTag = student.emotion || "NEUTRAL";
-        
+
         // Use full camera feed if available and enabled, otherwise use placeholder
         let videoHtml = '';
         const cameraEnabled = student.cameraEnabled !== false;
-        
+
         if (student.image && cameraEnabled) {
             videoHtml = `<div class="student-video-container">
                 <img src="${student.image}" alt="${student.name}" class="student-video-feed">
@@ -752,14 +767,14 @@ function updateStudentGrid() {
         const confusionLevel = student.confusionLevel || 'NONE';
         let confusionBadge = '';
         if (confusionScore >= 20) {
-            const confusionColor = confusionLevel === 'CRITICAL' ? '#ef4444' : 
-                                  confusionLevel === 'HIGH' ? '#f59e0b' : 
-                                  confusionLevel === 'MEDIUM' ? '#3b82f6' : '#6b7280';
+            const confusionColor = confusionLevel === 'CRITICAL' ? '#ef4444' :
+                confusionLevel === 'HIGH' ? '#f59e0b' :
+                    confusionLevel === 'MEDIUM' ? '#3b82f6' : '#6b7280';
             confusionBadge = `<div class="confusion-badge" style="background: ${confusionColor}; color: white; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 600; margin-left: 4px;">
                 ⚠️ ${confusionLevel}
             </div>`;
         }
-        
+
         card.innerHTML = `
             ${videoHtml}
             <div class="student-info">
@@ -773,11 +788,30 @@ function updateStudentGrid() {
                         ${confusionBadge}
                     </div>
                 </div>
+                <button onclick="event.stopPropagation(); kickStudent('${studentId}', '${student.name}')" class="kick-btn" style="
+                    margin-top: 8px;
+                    width: 100%;
+                    padding: 4px;
+                    background: #fee2e2;
+                    color: #ef4444;
+                    border: 1px solid #fca5a5;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    font-size: 12px;
+                    font-weight: 600;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 4px;
+                ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                    Kick from Class
+                </button>
             </div>
         `;
 
         container.appendChild(card);
-        
+
         // Store card reference and image element for efficient updates
         const imageElement = card.querySelector('.student-video-feed');
         studentCards.set(studentId, {
@@ -801,7 +835,7 @@ function updateFilterDropdown(liveCount) {
 // Update details panel
 function updateDetailsPanel(studentId) {
     const panel = document.getElementById("detailsPanel");
-    
+
     if (!studentId || !studentsData.has(studentId)) {
         panel.innerHTML = `
             <h3>Select a student</h3>
@@ -818,15 +852,15 @@ function updateDetailsPanel(studentId) {
         hash = hash & hash; // Convert to 32bit integer
     }
     const studentIdNum = Math.abs(hash).toString().substring(0, 5).padStart(5, '0');
-    
+
     // Confusion analysis section
     const confusionScore = student.confusionScore || 0;
     const confusionLevel = student.confusionLevel || 'NONE';
-    const confusionColor = confusionLevel === 'CRITICAL' ? '#ef4444' : 
-                           confusionLevel === 'HIGH' ? '#f59e0b' : 
-                           confusionLevel === 'MEDIUM' ? '#3b82f6' : 
-                           confusionLevel === 'LOW' ? '#6b7280' : '#10b981';
-    
+    const confusionColor = confusionLevel === 'CRITICAL' ? '#ef4444' :
+        confusionLevel === 'HIGH' ? '#f59e0b' :
+            confusionLevel === 'MEDIUM' ? '#3b82f6' :
+                confusionLevel === 'LOW' ? '#6b7280' : '#10b981';
+
     let confusionHtml = '';
     if (confusionScore > 0) {
         confusionHtml = `
@@ -870,7 +904,7 @@ function updateDetailsPanel(studentId) {
             </div>
         `;
     }
-    
+
     let timelineHtml = "";
     if (student.timeline.length > 0) {
         timelineHtml = student.timeline.map(item => `
@@ -909,7 +943,7 @@ function updateDetailsPanel(studentId) {
 // Update recent events
 function updateRecentEvents() {
     const container = document.getElementById("eventsList");
-    
+
     if (recentEvents.length === 0) {
         container.innerHTML = '<p style="color: #6b7280; font-size: 14px;">No recent events</p>';
         return;
